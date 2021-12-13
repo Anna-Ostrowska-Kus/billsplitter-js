@@ -9,21 +9,25 @@ const error = document.querySelector('.error')
 const shareBill = ()=>{
     if(total.value!="" && people.value!=""){
     
-        cost.textContent = (parseInt(total.value)+parseInt(total.value)*parseFloat(tip.value))/parseInt(people.value)
+        cost.textContent =((parseInt(total.value)+parseInt(total.value)*parseFloat(tip.value))/parseInt(people.value))
         info.style.display = 'block'
         error.style.display = 'none'
     }else {
         info.style.display = 'none'
+        error.style.display = 'block'
         error.textContent = "Fill all empty fields"
     
     }
+
+
 
  
 }
 
 
 
-    count.addEventListener('click', shareBill)
+
+count.addEventListener('click', shareBill)
 
 
 
